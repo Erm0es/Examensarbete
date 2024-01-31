@@ -1,47 +1,81 @@
-<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>290</x><y>200</y><w>210</w><h>140</h></coordinates><panel_attributes>Dish: obj
+<diagram program="umletino" version="15.1"><zoom_level>10</zoom_level><element><id>UMLClass</id><coordinates><x>0</x><y>250</y><w>310</w><h>100</h></coordinates><panel_attributes>appendPremadetoUL(premadeItem)
 --
-name: string
++premadeItemValue
++newPremadEl
+-
++newPremadeEl.addEventListener
++saveRandomMenu.addEventListener
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>620</x><y>60</y><w>210</w><h>80</h></coordinates><panel_attributes>saveOwnDishBtn
+--
++inputValue
++push(ownDishInDB, inputValue)
++clearInputField()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>50</x><y>0</y><w>220</w><h>90</h></coordinates><panel_attributes>makeRandomButtonWork
+--
++premadeDishInDB{}
++premadeDishArr 
++appendPremadeToUL(random)
++appendSavedRandomMenu</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>80</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>610</x><y>160</y><w>240</w><h>130</h></coordinates><panel_attributes>onValue(ownDishInDB)
+--
++clearOwnDishList()
++ownDishArr
++appendItemToOwnDishUl(currentitem)
++ownitemValue
+-
++newOwnEl.addEventListener
+-exaktLocationOfOwnItemInDB
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>670</x><y>0</y><w>100</w><h>40</h></coordinates><panel_attributes>inputValue
+-
++inputField.value</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>710</x><y>30</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>80</x><y>110</y><w>140</w><h>120</h></coordinates><panel_attributes>premadeDishInDB: obj
+--
 id: int
-side dish: Obj
+value: string
 --
++save
 +delete
 +mark as done
-+change</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>810</x><y>200</y><w>210</w><h>140</h></coordinates><panel_attributes>Own Dish: obj
++change</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>550</x><y>310</y><w>140</w><h>100</h></coordinates><panel_attributes>ownDishInDB:obj
 --
-name: string
 id: int
+value: string
 --
++save
 +delete
-+mark as done
-+change</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>180</x><y>0</y><w>210</w><h>120</h></coordinates><panel_attributes>Dishes
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>140</x><y>220</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>370</y><w>210</w><h>80</h></coordinates><panel_attributes>newPremadeEl
 --
-+RenderRandomDish()
-+RenderRandomSideDish()
++getNewRandomLi(newPremadeEl)
++newPremadeDishArr
++random
 
-
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>270</x><y>110</y><w>60</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>40;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>560</x><y>200</y><w>210</w><h>140</h></coordinates><panel_attributes>WeeklyMenu: list
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>50</x><y>340</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>370</y><w>310</w><h>90</h></coordinates><panel_attributes>saveRandomMenu
 --
-obj: Dish x7
+push(savedRandomDishesInDB, premadeitemValue)
++clearPremadeDishList()
++appendSavedRandomMenu()
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>250</x><y>340</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>220</x><y>480</y><w>310</w><h>90</h></coordinates><panel_attributes>appendSavedRandomMenu(savedItem)
 --
-+change
-</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>490</x><y>270</y><w>90</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>70;10;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>760</x><y>270</y><w>70</w><h>30</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>50;10;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>60</x><y>200</y><w>210</w><h>140</h></coordinates><panel_attributes>SideDish: obj
++savedItemValue
++newSavedEl
+-
++deleteRandomMenu.addEventListener
++clearSavedDishList()
+
+
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>360</x><y>450</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>720</x><y>130</y><w>30</w><h>50</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;30;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>600</x><y>270</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>700</x><y>310</y><w>310</w><h>120</h></coordinates><panel_attributes>appendItemToOwnDishUl(ownItem)
 --
-name: string
-id: int
---
-+change
-+delete</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>200</x><y>110</y><w>90</w><h>110</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;90;70;10</additional_attributes></element><element><id>UMLUseCase</id><coordinates><x>20</x><y>130</y><w>520</w><h>290</h></coordinates><panel_attributes>lt=.
++ownItemID
++ownItemValue
++newOwnEl
++ownDishUl.append(newOwnEl)
+-
+newOwnEl.addEventListener
+-exaktLocationOfOwnItemInDB
 
 
-
-
-
-
-
-
-
-
-
-
-Collaboration
-</panel_attributes><additional_attributes></additional_attributes></element></diagram>
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>840</x><y>270</y><w>30</w><h>60</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;40;10;10</additional_attributes></element></diagram>
